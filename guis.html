@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Portfolio of Arun Prakash">
+	<meta name="author" content="Arun Prakash">
+	<link rel="icon" href="images/icon.png">
+	<title>GUIs</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link href="styles/shared_styles.css" rel="stylesheet">
+
+	<style>
+		header {
+			margin-bottom: 50px;
+		}
+
+		#icon-holder {
+			height: 50px;
+		}
+
+		.icon {
+			margin: 10px;
+			position: relative;
+			top: -150px;
+		}
+	</style>
+</head>
+
+<body ng-app="guiSection" ng-controller="guiSecCtrl">
+
+	<nav class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				 aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-brand">
+					<img src="images/icon.png" height="40" />
+					<a href="index.html">DAIMLER</a>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a class="white-text hover-bg-gray" href="#">GUIs</a>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="scripts.html">Scripts</a>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="games.html">Django Web application</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="white-text hover-bg-gray dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							JS Apps
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">JavaScript Applications</li>
+							<li>
+								<a href="nsc.html">Number System Converter</a>
+							</li>
+							<li>
+								<a href="ntw.html">Numbers to Words</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="mailto:arun.prakash@daimler.com">Contact me</a>
+					</li>
+		
+						<a class="white-text hover-bg-gray" href="about.html">About me</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="header">
+		<header class="container-fluid">
+			<a href="https://github.com/">
+				<img src="images/followme.png" alt="Follow me on GitHub" class="followme" width="155" />
+			</a>
+			<h1>Programs with GUI</h1>
+			<p class="lead">I have created {{ programs.length }} applications</p>
+		</header>
+	</div>
+
+	<p id="icon-holder" class="text-center">
+		<img class="icon" src="images/guis.ico" width="180" height="180" />
+	</p>
+
+	<div class="container">
+		<div>
+			<h2 class="featurette-heading">How did I create them?</h2>
+			<p class="lead">Most of my programs are written in Python. They use Tkinter as their GUI framework.</p>
+		</div>
+		<div>
+			<h2>Applications</h2>
+			<p class="lead">
+				<span ng-repeat="x in programs">
+					<span>
+						<a href="#{{x.name}}">{{x.name}}</a> |</span>
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="container row">
+
+			<div ng-repeat="x in programs" class="row featurette">
+				<hr id="{{x.name}}" class="featurette-divider">
+				<div ng-if="$even" class="col-sm-7">
+					<h2 class="featurette-heading">{{ x.name }}.
+						<span class="text-muted">
+							{{ x.date.toDateString() }}</span>
+					</h2>
+					<p class="lead">{{ x.desc }}</p>
+				</div>
+				<div ng-if="$odd" class="col-sm-7 col-sm-push-5">
+					<h2 class="featurette-heading">{{ x.name }}.
+						<span class="text-muted">
+							{{ x.date.toDateString() }}</span>
+					</h2>
+					<p class="lead">{{ x.desc }}</p>
+				</div>
+				<div ng-if="$even" class="col-sm-5">
+					<img class="can-be-modal featurette-image img-responsive center-block" src="images/works/{{ x.img }}" alt="{{ x.name }}"
+					/>
+				</div>
+				<div ng-if="$odd" class="col-sm-5 col-sm-pull-7">
+					<img class="can-be-modal featurette-image img-responsive center-block" src="images/works/{{ x.img }}" alt="{{ x.name }}"
+					/>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<footer class="container-fluid">
+		<div id="social">
+			<a href="https://twitter.com/">
+				<img class="img-circle" src="images/twitter.png" width="50" />
+			</a>
+			<a href="https://facebook.com/">
+				<img class="img-circle" src="images/fb.gif" width="50" />
+			</a>
+		</div>
+		<div>
+			<h2>
+				<i>"
+					<span id="quote"></span>"</i>
+			</h2>
+			<p class="lead">
+				<span id="weekday"></span> quote</p>
+			<p>&copy; 2017 -
+				<span id="year"></span>
+			</p>
+		</div>
+	</footer>
+
+	<div id="myModal" class="modal">
+		<span id="closeModalImg">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption" class="lead"></div>
+	</div>
+
+	<a id="up" href="#">
+		<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+	</a>
+
+	<script src="scripts/main.guis.js"></script>
+	<script src="scripts/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="google-site-verification" content="QzsIWicJnp8pXpqzmtJ_O10VTfbbjB-bnBV3rsFZjH0" />
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Denniel Luis is a Filipino computer programmer who mainly codes in Python programming language. He solves problems using programming, but he does not solve problems about online accounts or hardware related stuffs.">
+	<meta name="keywords" content="programming,python,applications,scripts,games">
+	<meta name="author" content="Arun Prakash">
+	<link rel="icon" href="images/icon.png">
+	<title>Arun Prakash</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link href="styles/shared_styles.css" rel="stylesheet">
+
+	<style>
+		/* Categories */
+
+		#categories {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.btn-default:hover {
+			background: #4CAF50;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				 aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-brand">
+					<img src="images/icon.png" height="40" />
+					<a href="index.html">DAIMLER</a>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<a class="white-text hover-bg-gray" href="guis.html">GUIs</a>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="scripts.html">Scripts</a>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="games.html">Django web application</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="white-text hover-bg-gray dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							JS Apps
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">JavaScript Applications</li>
+							<li>
+								<a href="nsc.html">Number System Converter</a>
+							</li>
+							<li>
+								<a href="ntw.html">Numbers to Words</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="mailto:arun.prakash@daimler.com">Contact me</a>
+					</li>
+					<li>
+						<a class="white-text hover-bg-gray" href="about.html">About me</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="header">
+		<header class="container-fluid">
+			<a href="https://github.com/">
+				<img src="images/followme.png" alt="Follow me on GitHub" class="followme" width="155" />
+			</a>
+			<h1>Hi! I'm Arun Prakash</h1>
+			<p class="lead">Hobbiest Programmer</p>
+		</header>
+	</div>
+
+	<div class="container">
+
+		<div id="categories" class="row">
+			<div class="col-sm-4">
+				<img src="images/guis.ico" alt="Generic placeholder image" width="140" height="140" />
+				<h2>GUIs</h2>
+				<p class="lead">Almost all of my programs that has GUI are written in Python programming language. They use Tkinter for their GUI framework.
+					.</p>
+				<p>
+					<a class="btn btn-default" href="guis.html" role="button">View projects &raquo;</a>
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="images/scripts.png" alt="Generic placeholder image" width="140" height="140" />
+				<h2>Scripts</h2>
+				<p class="lead">Most of my scripts are written in Python as well.
+				</p>
+				<p>
+					<a class="btn btn-default" href="scripts.html" role="button">View projects &raquo;</a>
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="images/games.png" alt="Generic placeholder image" width="140" height="140" />
+				<h2>Web Apps</h2>
+				<p class="lead">Most of my web apps are written in python's django web framework</p>
+				<p>
+					<a class="btn btn-default" href="games.html" role="button">View projects &raquo;</a>
+				</p>
+			</div>
+		</div>
+
+		<hr class="featurette-divider" />
+
+		<hr class="featurette-divider" />
+
+		<hr class="featurette-divider" />
+
+		</div>
+
+	</div>
+
+	<footer class="container-fluid">
+		<div id="social">
+			<a href="https://twitter.com/">
+				<img class="img-circle" src="images/twitter.png" width="50" />
+			</a>
+			<a href="https://facebook.com/">
+				<img class="img-circle" src="images/fb.gif" width="50" />
+			</a>
+		</div>
+		<div>
+			<h2>
+				<i>"
+					<span id="quote"></span>"</i>
+			</h2>
+			<p class="lead">
+				<span id="weekday"></span> quote</p>
+			<p>&copy; 2017 -
+				<span id="year"></span>
+			</p>
+		</div>
+	</footer>
+
+	<div id="myModal" class="modal">
+		<span id="closeModalImg">&times;</span>
+		<img class="modal-content" id="img01" />
+		<div id="caption" class="lead"></div>
+	</div>
+
+	<a id="up" href="#">
+		<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+	</a>
+
+	<script src="scripts/main.js"></script>
+
+</body>
+
+</html>
